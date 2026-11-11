@@ -1,0 +1,252 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f0ff, #fff8f3);
+    color: #303047;
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 35px;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #6554a4;
+}
+
+.model-tag {
+    background: #eee8ff;
+    color: #705cae;
+    padding: 9px 17px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 65px 10px 40px;
+}
+
+.subtitle {
+    color: #df876e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.3;
+    color: #35334d;
+}
+
+.hero h1 span {
+    color: #8a70bd;
+}
+
+.description {
+    color: #77758a;
+    font-size: 15px;
+    max-width: 550px;
+    line-height: 1.8;
+    margin: 15px auto 0;
+}
+
+/* Prediction Card */
+
+.prediction-card {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #eee8f5;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(92, 75, 130, 0.08);
+}
+
+.card-heading {
+    margin-bottom: 28px;
+}
+
+.card-heading h2 {
+    font-size: 23px;
+    color: #39364f;
+}
+
+.card-heading p {
+    color: #9290a0;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Input Grid */
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #56536c;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e5e0ed;
+    border-radius: 10px;
+    outline: none;
+    background: #faf9fc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #927ac6;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(146, 122, 198, 0.12);
+}
+
+/* Predict Button */
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #8068b4, #a184ca);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(128, 104, 180, 0.25);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Result */
+
+.result {
+    margin-top: 25px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 14px;
+    background: #f3effb;
+    border: 1px solid #e6dcf5;
+}
+
+.result-label {
+    color: #987bb9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.result h2 {
+    color: #594783;
+    margin: 12px 0;
+    font-size: 25px;
+}
+
+#confidence {
+    color: #77718b;
+    font-size: 14px;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 20px;
+    color: #8068b4;
+}
+
+.error {
+    color: #c34f4f;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 35px 10px 20px;
+    color: #9995a5;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .main-container {
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 45px 5px 30px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .prediction-card {
+        padding: 23px 18px;
+    }
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+}

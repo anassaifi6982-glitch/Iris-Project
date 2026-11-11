@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris AI Predictor</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+
+<body>
+
+    <div class="main-container">
+
+        <header class="header">
+            <div class="logo">🌸 Iris AS</div>
+            <span class="model-tag">Deep Learning Model</span>
+        </header>
+
+        <section class="hero">
+            <p class="subtitle">ARTIFICIAL NEURAL NETWORK</p>
+
+            <h1>Iris Flower <span>Classification</span></h1>
+
+            <p class="description">
+                Discover the species of an Iris flower using
+                Artificial Intelligence and Deep Learning.
+            </p>
+        </section>
+
+        <main class="prediction-card">
+
+            <div class="card-heading">
+                <h2>Flower Measurements</h2>
+                <p>Enter the four measurements below.</p>
+            </div>
+
+            <form id="irisForm">
+
+                <div class="input-grid">
+
+                    <div class="input-group">
+                        <label for="sepal_length">Sepal Length (cm)</label>
+                        <input type="number" id="sepal_length"
+                               step="any" min="0" placeholder="e.g. 5.1" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sepal_width">Sepal Width (cm)</label>
+                        <input type="number" id="sepal_width"
+                               step="any" min="0" placeholder="e.g. 3.5" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="petal_length">Petal Length (cm)</label>
+                        <input type="number" id="petal_length"
+                               step="any" min="0" placeholder="e.g. 1.4" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="petal_width">Petal Width (cm)</label>
+                        <input type="number" id="petal_width"
+                               step="any" min="0" placeholder="e.g. 0.2" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="predictBtn">
+                    Predict Flower Species →
+                </button>
+
+            </form>
+
+            <div id="loading" class="loading hidden">
+                Analyzing flower measurements...
+            </div>
+
+            <div id="result" class="result hidden">
+                <p class="result-label">PREDICTION RESULT</p>
+                <h2 id="flowerName"></h2>
+                <p id="confidence"></p>
+            </div>
+
+            <p id="errorMessage" class="error hidden"></p>
+
+        </main>
+
+        <footer>
+            <p>Powered by Artificial Neural Network (ANN)</p>
+            <p>Developed by Mohd Anas</p>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
